@@ -13,6 +13,6 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("hell to world");
+        Debug.Log("hell to world");
     }
 }
