@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 132952770}
   m_Layer: 0
   m_Name: Platform_3
-  m_TagString: Untagged
+  m_TagString: Earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1389956872}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &165913297
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 850425834}
   m_Layer: 0
   m_Name: Platform_2
-  m_TagString: Untagged
+  m_TagString: Earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -992,14 +992,10 @@ GameObject:
   - component: {fileID: 1298099816}
   - component: {fileID: 1298099815}
   - component: {fileID: 1298099820}
+  - component: {fileID: 1298099821}
   m_Layer: 0
-<<<<<<< HEAD
-  m_Name: Earth_2 (1)
-  m_TagString: Earth
-=======
   m_Name: Player
   m_TagString: Player
->>>>>>> 1f82c3591924e63a310270014e374a67f3db4696
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1123,26 +1119,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1389956872}
-  - component: {fileID: 1389956871}
-  - component: {fileID: 1389956870}
-  - component: {fileID: 1389956869}
-  - component: {fileID: 1389956868}
-  - component: {fileID: 1389956873}
-  - component: {fileID: 1389956874}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!58 &1389956868
-CircleCollider2D:
-=======
   m_GameObject: {fileID: 1298099814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.9933395, y: 1.4, z: 0}
@@ -1154,7 +1130,6 @@ CircleCollider2D:
 --- !u!95 &1298099820
 Animator:
   serializedVersion: 3
->>>>>>> 1f82c3591924e63a310270014e374a67f3db4696
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1171,6 +1146,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1298099821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298099814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b37d01642da63e4cb8ae9106c345783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalSpeed: 0.1
+  verticalImpulse: 15
 --- !u!1 &1351198906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,50 +1240,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
---- !u!4 &1389956872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389956867}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.14, y: 2.47, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
-  m_Children:
-  - {fileID: 165913296}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1389956873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389956867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52e795c31b8506c4cac9f082574b140c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1389956874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389956867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b37d01642da63e4cb8ae9106c345783, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalSpeed: 0.1
-  verticalImpulse: 7
-=======
->>>>>>> 1f82c3591924e63a310270014e374a67f3db4696
 --- !u!1 &1396433657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1352,7 @@ Transform:
   - {fileID: 1351198907}
   - {fileID: 1125175719}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1692319303
 GameObject:
@@ -1424,7 +1369,7 @@ GameObject:
   - component: {fileID: 1692319304}
   m_Layer: 0
   m_Name: Platform_1
-  m_TagString: Untagged
+  m_TagString: Earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
