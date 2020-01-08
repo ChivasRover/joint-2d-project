@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< Updated upstream
+=======
+  - name: Base
+    uniqueID: 2933427579
+    locked: 0
+  - name: Foreground
+    uniqueID: 1296625593
+    locked: 0
+  - name: Player
+    uniqueID: 1624479869
+    locked: 0
+>>>>>>> Stashed changes
