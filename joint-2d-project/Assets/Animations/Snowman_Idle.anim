@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Snowman_standing_animation
+  m_Name: Snowman_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,11 +22,8 @@ AnimationClip:
     - time: 0
       value: {fileID: 8138623661649628763, guid: 536b095e8586b404aa751d8b1093696a,
         type: 3}
-    - time: 0.43333334
+    - time: 0.5
       value: {fileID: -1776763143189920464, guid: 536b095e8586b404aa751d8b1093696a,
-        type: 3}
-    - time: 0.8666667
-      value: {fileID: 8138623661649628763, guid: 536b095e8586b404aa751d8b1093696a,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -49,13 +46,12 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: 8138623661649628763, guid: 536b095e8586b404aa751d8b1093696a, type: 3}
     - {fileID: -1776763143189920464, guid: 536b095e8586b404aa751d8b1093696a, type: 3}
-    - {fileID: 8138623661649628763, guid: 536b095e8586b404aa751d8b1093696a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8833333
+    m_StopTime: 0.51666665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
