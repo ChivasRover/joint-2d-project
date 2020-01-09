@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
+    public Animator AnimatorController;
+    public SpriteRenderer SpriteRendererController;
+    private bool isRunning1
+    {
+        get { return AnimatorController.GetBool("isRunning"); }
+        set { AnimatorController.SetBool("isRunning", value); }
+    }
+
     public float horizontalSpeed;
     float speedX;
     public float verticalImpulse;
@@ -21,17 +29,23 @@ public class Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             speedX = -horizontalSpeed;
+            isRunning1 = true;
+            SpriteRendererController.flipX = true;
         }
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             speedX = horizontalSpeed;
-        }     
+            isRunning1 = true;
+            SpriteRendererController.flipX = false;
+        }
+        else { isRunning1 = false; SpriteRendererController.flipX = false; }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(new Vector2(0, verticalImpulse), ForceMode2D.Impulse);
         }
         transform.Translate(speedX, 0, 0);
         speedX = 0;
+        Debug.Log("isRunning == " + isRunning1);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
