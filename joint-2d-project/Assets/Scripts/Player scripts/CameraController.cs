@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
     public bool isLeft;
     private Transform player;
     private int lastX;
+
     [Header("Отступ камеры по вертикали")]
     public float dumpingY = 0.0f;
 

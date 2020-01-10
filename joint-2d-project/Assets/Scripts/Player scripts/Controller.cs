@@ -45,7 +45,6 @@ public class Controller : MonoBehaviour
         }
         transform.Translate(speedX, 0, 0);
         speedX = 0;
-        Debug.Log("isRunning == " + isRunning1);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -53,16 +52,14 @@ public class Controller : MonoBehaviour
         if (collision.gameObject.tag == "Earth")
         {
             isGrounded = true;
-           // Debug.Log("IsGrounded == " + isGrounded);
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Earth")
+        if (collision.gameObject.tag == "Earth")
         {
             isGrounded = false;
-            Debug.Log("IsGrounded == " + isGrounded);
         }
     }
 }
