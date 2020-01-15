@@ -9,5 +9,9 @@ public class DeathZone : MonoBehaviour
         if(other.tag == "Player") {
             other.transform.position = respawn.transform.position;
         }
+        if (other.tag == "Bullet")
+        {
+            Destroy(other);
+        }
     }
 }

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     public Animator AnimatorController;
-    public SpriteRenderer SpriteRendererController;
+    public GameObject FireController;
+    public GameObject Bullet;
     private bool isRunning1
     {
         get { return AnimatorController.GetBool("isRunning"); }
@@ -28,23 +29,29 @@ public class Controller : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            speedX = -horizontalSpeed;
+            speedX = horizontalSpeed;
             isRunning1 = true;
-            SpriteRendererController.flipX = true;
+            if (transform.localEulerAngles.y == 0)
+                transform.Rotate(0f, 180f, 0f);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             speedX = horizontalSpeed;
             isRunning1 = true;
-            SpriteRendererController.flipX = false;
+            if (transform.localEulerAngles.y == 180)
+                transform.Rotate(0f, -180f, 0f);
         }
-        else { isRunning1 = false; SpriteRendererController.flipX = false; }
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        else { isRunning1 = false; }
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             rb.AddForce(new Vector2(0, verticalImpulse), ForceMode2D.Impulse);
         }
         transform.Translate(speedX, 0, 0);
         speedX = 0;
+        if (Input.GetKey(KeyCode.Space))
+        { 
+            Shoot();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -61,5 +68,9 @@ public class Controller : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+    private void Shoot()
+    {
+        Instantiate(Bullet, FireController.transform.position, FireController.transform.rotation);
     }
 }
