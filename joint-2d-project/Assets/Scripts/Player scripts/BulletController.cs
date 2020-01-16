@@ -17,8 +17,9 @@ public class BulletController : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             EnemyBehaviour enemy1 = collision.GetComponent<EnemyBehaviour>();
-            enemy1.TakeDamage(Damage);
+            if(enemy1 != null)
+                enemy1.TakeDamage(Damage);
         }
-        Destroy(this);
+        Destroy(gameObject);
     }
 }

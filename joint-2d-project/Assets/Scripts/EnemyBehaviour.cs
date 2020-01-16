@@ -26,7 +26,7 @@ public class EnemyBehaviour : MonoBehaviour
     }
     private void Die()
     {
-        Destroy(this);
+        Destroy(gameObject);
         //Die logic;
     }
 }
