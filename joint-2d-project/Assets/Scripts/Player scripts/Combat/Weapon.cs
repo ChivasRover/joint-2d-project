@@ -8,6 +8,8 @@ public class Weapon : MonoBehaviour
     public Animator animator;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    private bool isCoroutineExecuting = true;
+
     void Update()
     {
         if (Input.GetButtonDown("Fire"))
@@ -17,6 +19,8 @@ public class Weapon : MonoBehaviour
     }
     void Shoot()
     {
+        animator.SetBool("isAttacking", true);
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        animator.SetBool("isAttacking", false);
     }
 }
