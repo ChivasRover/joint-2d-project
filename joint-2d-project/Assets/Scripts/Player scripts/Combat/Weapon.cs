@@ -8,7 +8,6 @@ public class Weapon : MonoBehaviour
     public Animator animator;
     public Transform firePoint;
     public GameObject bulletPrefab;
-    private bool isCoroutineExecuting = true;
 
     void Update()
     {

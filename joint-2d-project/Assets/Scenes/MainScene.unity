@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 76088094}
   - component: {fileID: 76088093}
   - component: {fileID: 76088096}
+  - component: {fileID: 76088097}
   m_Layer: 8
   m_Name: SnowmanEnemy
   m_TagString: Enemy
@@ -363,7 +364,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  damagePower: 1
   enemy: {fileID: 76088087}
+  coin: {fileID: 7060353341134186921, guid: d06fab61e9bfddd43b195523801dba32, type: 3}
+--- !u!114 &76088097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76088087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a3810e0fb45f743bdd19469e0722fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePower: 1
 --- !u!1 &76497640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,6 +1351,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &591445940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5026261664707140712, guid: d6c5687f65ddc884dad8c3f696bc595d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5026261665970598414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &591445941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591445940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5fbdc279f7b8d42a93f9f025d3c79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 5
 --- !u!1 &699444497
 GameObject:
   m_ObjectHideFlags: 0
@@ -11730,7 +11765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAoIeyPxOoBbgIAABMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK5yUl83K8t11CyB7yqJCtXHwR9hirkCWXJAdIin/fkSxjhz0heh7q7hn5i3Bpasis0mvN80eVA/k5Iu5Mfoz64AMc2U7JDf+ELued57Z0ScznvDLLFeKRKzOqAqt59kvuhEumCDaSF0pXq3wHS2WsQbhgwgCGtLKuWiL0NSJH/BknruSEp0nsTp94SujojMcMpAXdp9KbyTSK6ILOpl3JTXJLEVzEqzGNQ/X8ZjpJaEznk9U4mvlOjcwEq2rInay+4Wwe+iQ+S6LekOC0ZUoIbgJZYk+1N2NTl6DBuZFzhto9QZdeAt+V1pEa1j4XhQEbjNHsdMc1Wtg2Jb9V62vFzL5l9cFE466ZzBeeUtv08b/4OPLhQqvqobs3ou4OW/Js/8pOGTN2YPwQvvtOvJEHJvZsK+C9BPmk1lo1Mseg1Y0rbQxM7vq/F2nLErJ9j7dUr8CmHowvmN1N2Wk4e/XHpeDV1k941gIbobzdfjlA42D+IGG/Oia0QNSx+Gvgje2GOxYC91wbi6GgUjp6W9Vol0pW3jOnprFLpSV4OJCuQTJhTy/Yxl6P8Co2uPYqcs/cawqXh1j3SK5KPNznU3oVelGHy7BMqQ6PYMrnxgouoSftAk/o01JJ2W7Y0JOubNPogmWDsl3D8++rRSjMF3QbxwmdwnyaxeMkgWlRxLc0WhRxkhTE7x6XqJOJl5ZosAenJvvmEves+8iM1prVfttzzQ5r/lmpgeVcFmqTaQD5/K2DAY134JvMVzlHfzZgLZd+3OQrJUJle8jTS37qha6OVrO0V5+Smn8o65CULP1HJSVncv4HUEsDBBQAAAgIAAAoIeyoCEs/bAAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01FFQSi9KLMgoBoqAOaWZKSB2tJJBqqmZQZK5uaWBcaqpcbK5rqVlqnFamrmFgaFZmrmlZZpSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAACgh7I/E6gFuAgAAEwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAACgh7KgISz9sAAAAeAAAAAkAJAAAAAAAAAAAAAAAuwIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAByAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAYIeyPxOoBbgIAABMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK5yUl83K8t11CyB7yqJCtXHwR9hirkCWXJAdIin/fkSxjhz0heh7q7hn5i3Bpasis0mvN80eVA/k5Iu5Mfoz64AMc2U7JDf+ELued57Z0ScznvDLLFeKRKzOqAqt59kvuhEumCDaSF0pXq3wHS2WsQbhgwgCGtLKuWiL0NSJH/BknruSEp0nsTp94SujojMcMpAXdp9KbyTSK6ILOpl3JTXJLEVzEqzGNQ/X8ZjpJaEznk9U4mvlOjcwEq2rInay+4Wwe+iQ+S6LekOC0ZUoIbgJZYk+1N2NTl6DBuZFzhto9QZdeAt+V1pEa1j4XhQEbjNHsdMc1Wtg2Jb9V62vFzL5l9cFE466ZzBeeUtv08b/4OPLhQqvqobs3ou4OW/Js/8pOGTN2YPwQvvtOvJEHJvZsK+C9BPmk1lo1Mseg1Y0rbQxM7vq/F2nLErJ9j7dUr8CmHowvmN1N2Wk4e/XHpeDV1k941gIbobzdfjlA42D+IGG/Oia0QNSx+Gvgje2GOxYC91wbi6GgUjp6W9Vol0pW3jOnprFLpSV4OJCuQTJhTy/Yxl6P8Co2uPYqcs/cawqXh1j3SK5KPNznU3oVelGHy7BMqQ6PYMrnxgouoSftAk/o01JJ2W7Y0JOubNPogmWDsl3D8++rRSjMF3QbxwmdwnyaxeMkgWlRxLc0WhRxkhTE7x6XqJOJl5ZosAenJvvmEves+8iM1prVfttzzQ5r/lmpgeVcFmqTaQD5/K2DAY134JvMVzlHfzZgLZd+3OQrJUJle8jTS37qha6OVrO0V5+Smn8o65CULP1HJSVncv4HUEsDBBQAAAgIAAAYIeyoCEs/bAAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01FFQSi9KLMgoBoqAOaWZKSB2tJJBqqmZQZK5uaWBcaqpcbK5rqVlqnFamrmFgaFZmrmlZZpSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAABgh7I/E6gFuAgAAEwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAABgh7KgISz9sAAAAeAAAAAkAJAAAAAAAAAAAAAAAuwIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAByAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -11743,7 +11778,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 1
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 4
   maxNearestNodeDistance: 1000
   scanOnStartup: 1
   fullGetNearestSearch: 1
@@ -16912,6 +16947,11 @@ PrefabInstance:
     - target: {fileID: 5026261664707140709, guid: d6c5687f65ddc884dad8c3f696bc595d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026261664707140710, guid: d6c5687f65ddc884dad8c3f696bc595d,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5026261664707140712, guid: d6c5687f65ddc884dad8c3f696bc595d,
