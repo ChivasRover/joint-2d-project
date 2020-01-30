@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealthControll : MonoBehaviour
+public class PlayerStatsControll : MonoBehaviour
 {
     public int playerHealth;
+    public int coinCounter;
     public void TakeDamage(int damage)
     {
         playerHealth -= damage;

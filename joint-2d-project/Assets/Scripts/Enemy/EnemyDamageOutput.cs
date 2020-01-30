@@ -6,10 +6,10 @@ public class EnemyDamageOutput : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D other)
     {
-        PlayerHealthControll playerHealthControll = other.gameObject.GetComponent<PlayerHealthControll>();
+        PlayerStatsControll playerStatsControll = other.gameObject.GetComponent<PlayerStatsControll>();
         if (other.gameObject.tag == "Player")
         {
-            playerHealthControll.TakeDamage(damagePower);
+            playerStatsControll.TakeDamage(damagePower);
         }
     }
 }

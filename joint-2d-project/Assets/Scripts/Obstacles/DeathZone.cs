@@ -3,10 +3,10 @@
 public class DeathZone : MonoBehaviour
 {
     public GameObject respawn;
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.tag == "Player") {
-            other.transform.position = respawn.transform.position;
+        if(other.gameObject.tag == "Player") {
+            other.gameObject.transform.position = respawn.transform.position;
         }
     }
 }
