@@ -8,13 +8,21 @@ public class Weapon : MonoBehaviour
     public Animator animator;
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public float attackAnimationTimeOut = 1f;
+    public bool isReadyToAttack = true;
+    public float attackDelay = 1f;
+    public float attackAnimationTimeOut = 0.5f;
 
     void Update()
     {
+        
         if (Input.GetButtonDown("Fire"))
         {
-            Shoot();
+            if(isReadyToAttack)
+            {
+                Shoot();
+                isReadyToAttack = false;
+                Invoke("getReadyToAttack", attackDelay);
+            }
         }
     }
     void Shoot()
@@ -27,4 +35,5 @@ public class Weapon : MonoBehaviour
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         animator.SetBool("isAttacking", false);
     }
+    private void getReadyToAttack() => isReadyToAttack = true;
 }
