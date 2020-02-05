@@ -49,6 +49,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -120,6 +121,8 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: 2545186517419679801}
   damage: 1
+  Explosion: {fileID: 1651325803340749582, guid: 2490e6d21897e344d816bc1c7f0a8f8c,
+    type: 3}
 --- !u!58 &721473153774293227
 CircleCollider2D:
   m_ObjectHideFlags: 0

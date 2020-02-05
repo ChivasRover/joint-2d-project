@@ -8,14 +8,13 @@ public class Weapon : MonoBehaviour
     public Animator animator;
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public float attackTimeOut = 0;
-    public float attackAnimationTimeOut = 0.5f;
+    public float attackAnimationTimeOut = 1f;
 
     void Update()
     {
         if (Input.GetButtonDown("Fire"))
         {
-            Invoke("Shoot", attackTimeOut);
+            Shoot();
         }
     }
     void Shoot()
