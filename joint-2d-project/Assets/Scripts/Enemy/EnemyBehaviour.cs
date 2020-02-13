@@ -17,6 +17,7 @@ public class EnemyBehaviour : MonoBehaviour
     private void Die()
     {
         //Die logic
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
         Instantiate(coin, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

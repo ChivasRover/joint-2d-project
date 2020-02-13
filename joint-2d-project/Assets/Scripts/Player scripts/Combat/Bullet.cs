@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour
         {
             enemy.TakeDamage(damage);
         }
+        FindObjectOfType<AudioManager>().Play("BlowSound");
         Destroy(gameObject);
     }
 

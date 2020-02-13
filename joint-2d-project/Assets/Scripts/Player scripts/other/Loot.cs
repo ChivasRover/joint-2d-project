@@ -9,6 +9,7 @@ public class Loot : MonoBehaviour
         PlayerStatsControll playerStats = collision.gameObject.GetComponent<PlayerStatsControll>();
         if(collision.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("CoinSound");
             playerStats.coinCounter++;
             Destroy(gameObject);
         }
